@@ -1,0 +1,85 @@
+html, body {
+    width: 100%;
+    height: 100%;
+    background: -webkit-radial-gradient(#e5e6f2 50%, #a2a5cf 90%);
+    background: radial-gradient(#e5e6f2 50%, #a2a5cf 90%);
+}
+
+#grass {
+    position: fixed;
+    left: 0px;
+    bottom: 0px;
+    width: 100%;
+    z-index: 100;
+}
+
+#muccone {
+    position: fixed;
+    top: 0%;
+    left: 5%;
+    width: 70%;
+    -webkit-animation: cowRaise 10s infinite ease-out;
+    animation: cowRaise 10s infinite ease-out;
+}
+
+.btn {
+    position: relative;
+    width: 200px;
+    left: 23%;
+}
+
+.tips {
+    position: relative;
+    right: 1%;
+    top: 10%;
+    -webkit-box-shadow: 2px 2px 5px #8c8c8d;
+    box-shadow: 2px 2px 5px #8c8c8d;
+    float: right;
+    z-index: 10000000000;
+    background-color: #e5e6f2;
+    vertical-align: middle;
+    height: 80%;
+    width: 25%;
+}
+
+@-webkit-keyframes cowRaise {
+    0% {
+        top: 100%;
+    }
+    20% {
+        top: 100%;
+    }
+    40% {
+        top: -10%;
+    }
+    60% {
+        top: -10%;
+    }
+    80% {
+        top: 100%;
+    }
+    100% {
+        top: 100%;
+    }
+}
+
+@keyframes cowRaise {
+    0% {
+        top: 100%;
+    }
+    20% {
+        top: 100%;
+    }
+    40% {
+        top: -10%;
+    }
+    60% {
+        top: -10%;
+    }
+    80% {
+        top: 100%;
+    }
+    100% {
+        top: 100%;
+    }
+}
