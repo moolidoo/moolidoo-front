@@ -1,13 +1,15 @@
 {
     "css": [
         "node_modules/bootstrap/dist/css/bootstrap.css",
-        "node_modules/font-awesome/css/font-awesome.css"
+        "node_modules/font-awesome/css/font-awesome.css",
+        "node_modules/bootstrap-social/bootstrap-social.css"
     ],
     "fonts": [
         "node_modules/font-awesome/fonts/*"
     ],
     "js": [
         "asteroid",
+        "asteroid-oauth-mixin",
         "ramda",
         "react",
         "react/addons",

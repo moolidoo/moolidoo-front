@@ -1,1 +1,1 @@
-exports.white  = "#ffffff";
+export const white  = "#ffffff";

@@ -22,12 +22,6 @@ html, body {
     animation: cowRaise 10s infinite ease-out;
 }
 
-.btn {
-    position: relative;
-    width: 200px;
-    left: 23%;
-}
-
 .tips {
     position: relative;
     right: 1%;

@@ -1,8 +1,8 @@
 {
   "name": "mootips",
   "version": "1.0.0",
-  "description": "mootips front-end",
-  "main": "index.js",
+  "description": "mooltidoo front-end",
+  "main": "main.jsx",
   "scripts": {
     "build": "gulp build",
     "dev": "gulp dev",
@@ -15,16 +15,17 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/mondora/mootips.git"
+    "url": "git+https://github.com/moolidoo/mooltidoo-front.git"
   },
   "license": "Apache-2.0",
   "bugs": {
-    "url": "https://github.com/mondora/mootips/issues"
+    "url": "https://github.com/moolidoo/mooltidoo-front/issues"
   },
-  "homepage": "https://github.com/mondora/mootips#readme",
+  "homepage": "https://github.com/moolidoo/mooltidoo-front#readme",
   "devDependencies": {
     "babel": "^5.6.7",
     "babel-core": "^5.6.4",
+    "babel-eslint": "^4.1.3",
     "babel-loader": "^5.1.4",
     "bluebird": "^2.9.30",
     "browser-sync": "^2.7.12",
@@ -57,12 +58,15 @@
     "semver": "^5.0.1",
     "sinon": "^1.15.3",
     "sinon-chai": "^2.8.0",
-    "webpack": "^1.9.11",
+    "webpack": "^1.12.2",
     "xml2js": "^0.4.12"
   },
   "dependencies": {
     "asteroid": "mondora/asteroid#1.0.0-rewrite",
+    "asteroid-collections-mixin": "^1.0.1",
+    "asteroid-oauth-mixin": "^1.0.14",
     "bootstrap": "^3.3.5",
+    "bootstrap-social": "^4.9.1",
     "font-awesome": "^4.4.0",
     "immutable": "^3.7.5",
     "lodash.debounce": "^3.1.1",
@@ -72,6 +76,7 @@
     "react": "^0.13.3",
     "react-bootstrap": "^0.23.7",
     "react-immutable-proptypes": "^1.2.3",
-    "react-router": "1.0.0-beta3"
+    "react-router": "1.0.0-beta3",
+    "url-parse": "^1.0.5"
   }
 }

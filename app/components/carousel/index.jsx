@@ -36,7 +36,7 @@ var Carousel = React.createClass({
         var id = user.get("_id");
         var name = user.get("profile").get("name");
         var tips = user.get("tips") || 0;
-        return this.renderCarouselItem(image, name, id, tips);
+        return this.renderCarouselItem({image, name, id, tips});
     },
     handleSelect: function (selectedIndex, selectedDirection) {
         this.setState({
@@ -49,20 +49,29 @@ var Carousel = React.createClass({
         this.props.asteroid.call("addTips", inc, id)
             .catch(e => console.log(e));
     },
-    renderCarouselItem: function (image, name, id, tips) {
+    renderCarouselItem: function ({image, name, id, tips}) {
         return (
             <bootstrap.CarouselItem key={id} style={{height: "100vh"}}>
                 <div style={styles.divTips}>
-                    <h4>{"Dona una mancia a:"}</h4>
+                    <h4>{"Give a mootip to"}</h4>
                     <components.Spacer direction="v" size={20} />
                     <h3>{name}</h3>
                     <components.Spacer direction="v" size={20} />
-                    <bootstrap.Button onClick={R.partial(this.addTipsToUser, [id])} style={{position: "inherit", outline: "none"}}>
-                        {"Mancia"}
+                    <bootstrap.Button onClick={
+                        R.partial(this.addTipsToUser, [id])}
+                        style={{
+                            position: "inherit",
+                            outline: "none",
+                            width: "200px"
+                        }}
+                    >
+                        {"mootip"}
                     </bootstrap.Button>
-                    <components.Spacer direction="v" size={25} />
+                    <components.Spacer direction="v" size={50} />
                     <span style={{bottom: "10px"}}>
-                        {`${name} ha accumulato finora`} <br /> <br /> {`${tips} mance`}
+                        {`${name} has received`}
+                        <components.Spacer direction="v" size={30} />
+                        <span style={{fontWeight: 600}}>{`${tips}`}</span>{" mootips"}
                     </span>
                 </div>
                 <img id="muccone" src={image} style={{height: "900px", width: "900px"}}/>
