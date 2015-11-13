@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/moolidoo/moolidoo-front.svg?branch=master)](https://travis-ci.org/moolidoo/moolidoo-front.svg)
+
 # mootips-frontend
 
 ## Development environment setup
