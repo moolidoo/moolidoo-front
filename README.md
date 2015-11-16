@@ -1,4 +1,4 @@
-[![Build Status](https://travis-ci.org/moolidoo/moolidoo-front.svg?branch=master)](https://travis-ci.org/moolidoo/moolidoo-front.svg)
+[![Build Status](https://travis-ci.org/moolidoo/moolidoo-front.svg?branch=master)](https://travis-ci.org/moolidoo/moolidoo-front)
 
 # mootips-frontend
 
