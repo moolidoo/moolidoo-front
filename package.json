@@ -63,7 +63,7 @@
   },
   "dependencies": {
     "asteroid": "mondora/asteroid#1.0.0-rewrite",
-    "asteroid-collections-mixin": "^1.0.1",
+    "asteroid-immutable-collections-mixin": "^1.0.1",
     "asteroid-oauth-mixin": "^1.0.14",
     "bootstrap": "^3.3.5",
     "bootstrap-social": "^4.9.1",

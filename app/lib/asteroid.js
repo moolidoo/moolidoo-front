@@ -1,6 +1,6 @@
 import {createClass} from "asteroid";
 import * as oauthMixin from "asteroid-oauth-mixin";
-import * as collectionMixin from "asteroid-collections-mixin";
+import * as collectionMixin from "asteroid-immutable-collections-mixin";
 
 import * as reactMixin from "./asteroid-react";
 
