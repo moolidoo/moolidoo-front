@@ -12,7 +12,7 @@ var asteroid = new Asteroid({
 });
 
 // Decommment for debugging
-// window.asteroid = asteroid;
+window.asteroid = asteroid;
 // asteroid.ddp.socket.on("message:in", (msg) => {
 //     console.log("Message IN");
 //     console.log(msg);

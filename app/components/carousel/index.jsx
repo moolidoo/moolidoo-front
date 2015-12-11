@@ -9,13 +9,16 @@ var colors     = require("lib/colors");
 
 var styles = {
     divTips: {
+        position: "relative",
+        display: "block",
         width: "20%",
-        height: "50%",
         float: "right",
         marginRight: "11%",
         marginTop: "10%",
         backgroundColor: colors.white,
-        textAlign: "center"
+        textAlign: "center",
+        minHeight: "300px",
+        height: "50%"
     }
 };
 
@@ -48,31 +51,44 @@ var Carousel = React.createClass({
         this.props.asteroid.call("addTips", id)
             .catch(e => console.log(e));
     },
+    renderButtonAddTips: function (id) {
+        return (
+            <bootstrap.Button onClick={
+                R.partial(this.addTipsToUser, [id])}
+                style={{
+                    position: "inherit",
+                    outline: "none",
+                    width: "80%",
+                    marginTop: "15%"
+                }}
+            >
+                {"mootip"}
+            </bootstrap.Button>
+        );
+    },
+    renderTipBox: function ({name, id, tips}) {
+        return (
+            <div style={styles.divTips}>
+                <h4>{"Give a mootip to"}</h4>
+                <h3 style={{marginTop: "10%"}}>{name}</h3>
+                {
+                    (id !== this.props.asteroid.userId) ?
+                    this.renderButtonAddTips(id) :
+                    null
+                }
+                <components.Spacer direction="v" size={30} />
+                <div style={{position: "relative"}}>
+                    {`${name} has received`}
+                    <components.Spacer direction="v" size={30} />
+                    <span style={{fontWeight: 600}}>{`${tips}`}</span>{" mootips"}
+                </div>
+            </div>
+        );
+    },
     renderCarouselItem: function ({image, name, id, tips}) {
         return (
             <bootstrap.CarouselItem key={id} style={{height: "100vh"}}>
-                <div style={styles.divTips}>
-                    <h4>{"Give a mootip to"}</h4>
-                    <components.Spacer direction="v" size={20} />
-                    <h3>{name}</h3>
-                    <components.Spacer direction="v" size={20} />
-                    <bootstrap.Button onClick={
-                        R.partial(this.addTipsToUser, [id])}
-                        style={{
-                            position: "inherit",
-                            outline: "none",
-                            width: "200px"
-                        }}
-                    >
-                        {"mootip"}
-                    </bootstrap.Button>
-                    <components.Spacer direction="v" size={50} />
-                    <span style={{bottom: "10px"}}>
-                        {`${name} has received`}
-                        <components.Spacer direction="v" size={30} />
-                        <span style={{fontWeight: 600}}>{`${tips}`}</span>{" mootips"}
-                    </span>
-                </div>
+                {this.renderTipBox({name, id, tips})}
                 <img id="muccone" src={image} style={{height: "900px", width: "900px"}}/>
             </bootstrap.CarouselItem>
         );
