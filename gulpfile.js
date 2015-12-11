@@ -29,7 +29,7 @@ var getIp = function () {
 
 var ENVIRONMENT  = process.env.ENVIRONMENT || "dev";
 var WRITE_BACKEND_HOST = process.env.WRITE_BACKEND_HOST || getIp() + ":3000";
-var READ_BACKEND_HOST = process.env.READ_BACKEND_HOST || getIp() + ":3000";
+var READ_BACKEND_HOST = process.env.READ_BACKEND_HOST || "localhost:3000";
 var MINIFY_FILES = (process.env.MINIFY_FILES === "true") || false;
 
 var deps = JSON.parse(fs.readFileSync("deps.json", "utf8"));

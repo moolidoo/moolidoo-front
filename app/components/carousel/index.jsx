@@ -45,8 +45,7 @@ var Carousel = React.createClass({
         });
     },
     addTipsToUser: function (id) {
-        var inc = 1;
-        this.props.asteroid.call("addTips", inc, id)
+        this.props.asteroid.call("addTips", id)
             .catch(e => console.log(e));
     },
     renderCarouselItem: function ({image, name, id, tips}) {
